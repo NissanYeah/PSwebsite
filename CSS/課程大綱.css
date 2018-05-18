@@ -1,0 +1,25 @@
+body {
+    background-color: #f8fafc;
+}
+
+#showbox {
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px black solid; */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(28, 31, 33, .1);
+    padding: 20px;
+}
+
+.box {
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px black solid; */
+}
+
+.box img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}

@@ -1,0 +1,148 @@
+body {
+    background-color: #f8fafc;
+}
+
+/* 留言區開始 */
+
+#talkcard {
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(28, 31, 33, .1);
+    padding: 20px;
+}
+
+.input_nickname {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f8fafc;
+    color: #9199a1;
+    width: 80%;
+}
+
+.input_comment {
+    border: none;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    color: #9199a1;
+    padding: 10px;
+    width: 80%;
+}
+
+/* 留言區結束 */
+
+.talkcard_response {
+    margin: 20px auto;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(28, 31, 33, .1);
+    background-color: white;
+    width: 70%;
+}
+
+.talkcard_response_photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("/img/125003");
+    background-size: cover;
+    /* background-color: rgba(238, 237, 237, 0.973); */
+}
+
+.talkcard_response_nickname {
+    display: inline-block;
+    position: relative;
+    left: 5px;
+    bottom: 20px;
+}
+
+.talkcard_response_comment {
+    width: 80%;
+    position: relative;
+    left: 60px;
+}
+
+.talkcard_response_reply {
+    position: relative;
+    top: 20px;
+    color: #9199a1;
+}
+
+.talkcard_response_reply:hover {
+    cursor: pointer;
+}
+
+.talkcard_response_replytime {
+    position: relative;
+    left: 550px;
+    color: #9199a1;
+}
+
+/* 子留言——留言區 */
+
+.talkcard_response2_reply {
+    display: none;
+    margin: 20px;
+}
+
+.response_input_nickname {
+    margin-top: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f8fafc;
+    padding: 10px;
+    color: #9199a1;
+    width: 20%;
+}
+
+.response_input_comment {
+    border: none;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    color: #9199a1;
+    padding: 10px;
+    width: 90%;
+}
+
+/* 子留言顯示區 */
+
+.talkcard_response2_show {
+    margin: 0 15px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #f8fafc;
+}
+
+.talkcard_response2_photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(238, 237, 237, 0.973);
+}
+
+.talkcard_response2_nickname {
+    display: inline-block;
+    position: relative;
+    left: 5px;
+    bottom: 20px;
+}
+
+.talkcard_response2_comment {
+    padding: 10px;
+}
+
+.talkcard_response2_replytime {
+    position: relative;
+    left: 500px;
+    color: #9199a1;
+}

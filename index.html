@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <title>小編之路：課程留言版</title>
+
+    <!-- 連結API -->
+</head>
+
+<body>
+
+    <!-- 裝飾用 -->
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">小編之路：留言板</h5>
+
+        <nav class="my-2 my-md-0 mr-md-4">
+            <a class="p-2 text-dark" href="./課程大綱.html">課程大綱</a>
+            <a class="p-2 text-dark" href="">上課講義</a>
+            <a class="p-2 text-dark" href="./實用資源.html">實用資源</a>
+            <a class="p-2 text-dark" href="./index.html">留言版</a>
+
+        </nav>
+        <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>
+    <!-- 裝飾用 -->
+    <div class="container">
+
+
+
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">PS進階班
+                <h5 class="text-muted">班次20180511</h5>
+            </h1>
+
+
+            <p class="lead">歡迎寫下任何想問的問題，想說的話。EX：請慢一點</p>
+        </div>
+
+        <div id="talkcard">
+            <form action="./PHP/sendInfo.php" method="POST" name="myform">
+                <input name="nickname" id="nickname" type="text" class="input_nickname" placeholder="請輸入暱稱">
+                <br>
+                <br>
+                <textarea name="comment" id="comment" cols="30" rows="10" class="input_comment" placeholder="請輸入留言"></textarea>
+                <br>
+                <input type="button" class="btn btn-secondary" value="送出" onClick="check_fillout()">
+            </form>
+        </div>
+
+
+
+
+        <!-- 留言區結束 -->
+
+        <!-- 留言顯示區開始 -->
+        <div id="app">
+            <div v-for="item in member" class="talkcard_response">
+                <div class="talkcard_response_photo"></div>
+                <div class="talkcard_response_nickname">{{item.name}}</div>
+                <div class="talkcard_response_comment">{{item.comment}}</div>
+                <br>
+                <span class="talkcard_response_replytime">{{item.time}}</span>
+
+
+
+                <!-- 子留言顯示區 -->
+                <div v-for="second in item.second_member" class="talkcard_response2_show">
+                    <div class="talkcard_response2_photo"></div>
+                    <div class="talkcard_response2_nickname">{{second.name}}</div>
+                    <div class="talkcard_response2_comment">{{second.comment}}
+                    </div>
+                    <br>
+                    <span class="talkcard_response2_replytime">{{second.time}}</span>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- 留言顯示區結束 -->
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+        <script src="./JS/data.js"></script>
+        <script src="./JS/check.js"></script>
+
+
+
+
+</body>
+
+</html>
